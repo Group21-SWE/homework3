@@ -25,14 +25,14 @@ jobs:
         pip3 install -r requirements.txt
     - name: Lint with pylint
       run: |
-        pylint *.py> post_traces/pylint_report.txt
+        python3 -m pylint *.py > post_traces/pylint_report.txt
     - name: Error detection with pyflake
       run: |
-        pyflakes *.py > post_traces/pyflakes_report.txt
+        python3 -m pyflakes *.py > post_traces/pyflakes_report.txt
     - name: Complexity analysis with radon
       run: |
-        radon cc . -s -a > post_traces/cyclomatic_complexity_report.txt
-        radon mi . --json > post_traces/maintainability_index_report.json
+        python3 -m radon cc . -s -a > post_traces/cyclomatic_complexity_report.txt
+        python3 -m radon mi . --json > post_traces/maintainability_index_report.json
     - name: Test with pytest
       run: |
         pytest

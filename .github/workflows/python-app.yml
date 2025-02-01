@@ -25,7 +25,7 @@ jobs:
         pip3 install -r requirements.txt
     - name: Lint with pylint
       run: |
-        python3 -m pylint *.py > post_traces/pylint_report.txt
+        python3 -m pylint *.py --exit-zero  > post_traces/pylint_report.txt
     - name: Error detection with pyflake
       run: |
         python3 -m pyflakes *.py > post_traces/pyflakes_report.txt

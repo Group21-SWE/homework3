@@ -1,0 +1,40 @@
+
+
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        pip3 install -r requirements.txt
+    - name: Lint with pylint
+      run: |
+        pylint *.py> pylint_report.txt > post_traces/pylint_report.txt
+    - name: Error detection with pyflake
+      run: |
+        pyflakes *.py> pyflakes_report.txt > post_traces/pyflakes_report.txt
+    - name: Complexity analysis with radon
+      run: |
+        radon cc . -s -a > post_traces/cyclomatic_complexity_report.txt
+        radon mi . --json > post_traces/maintainability_index_report.json
+    - name: Test with pytest
+      run: |
+        pytest

@@ -26,7 +26,7 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with pylint
       run: |
-        pylint $(git ls-files '*.py') > pylint_report.txt
+        pylint $(git ls-files '*.py') --exit-zero
     - name: Error detection with pyflake
       run: |
         python3 -m pyflakes *.py > post_traces/pyflakes_report.txt

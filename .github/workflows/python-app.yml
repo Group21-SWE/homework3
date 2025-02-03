@@ -41,6 +41,16 @@ jobs:
       with:
         name: pylint-report
         path: post_traces/pylint_report.txt
-    - name: Test with pytest
+    - name: Configure Git
       run: |
-        pytest
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Add Pyflakes Report to Repo
+      run: |
+        git checkout $GITHUB_REF_NAME  # Ensure we're on the correct branch
+        mkdir -p reports               # Store reports in a dedicated folder
+        mv post_traces/pyflakes_report.txt reports/pyflakes_report.txt
+        git add reports/pyflakes_report.txt
+        git commit -m "Add Pyflakes report"
+        git push

@@ -26,10 +26,10 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with pylint
       run: |
-        pylint $(git ls-files '*.py') --exit-zero
+        pylint *.py --exit-zero
     - name: Error detection with pyflake
       run: |
-        pyflakes $(git ls-files '*.py')
+        pyflakes *.py
     - name: Complexity analysis with radon
       run: |
         python3 -m radon cc . -s -a

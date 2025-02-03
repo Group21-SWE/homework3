@@ -1,0 +1,70 @@
+
+
+name: Python application
+
+on:
+  push:
+    branches: [ "**" ]
+
+permissions:
+  contents: write
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Create post_traces directory
+      run: mkdir -p reports
+    - name: Lint with pylint
+      run: |
+        pylint *.py --exit-zero > reports/pylint_report.txt
+    - name: Error detection with pyflakes
+      run: |
+        pyflakes *.py > reports/pyflakes_report.txt
+    - name: Complexity analysis with radon
+      run: |
+        python3 -m radon cc . -s -a > reports/cyclomatic_complexity_report.txt
+        python3 -m radon mi . --json > reports/maintainability_index_report.txt
+    - name: Upload Pylint Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: pylint-report
+        path: reports/pylint_report.txt
+    - name: Upload Pyflakes Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: pyflakes-report
+        path: reports/pyflakes_report.txt
+    - name: Upload Cyclomatic Complexity Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: cyclomatic-complexity-report
+        path: reports/cyclomatic_complexity_report.txt
+    - name: Upload Maintainability Index Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: maintainability-index-report
+        path: reports/maintainability_index_report.txt
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Add reports to the repository
+      run: |
+        git checkout $GITHUB_REF_NAME
+        mkdir -p post_traces
+        mv reports/* post_traces
+        git add post_traces
+        git commit -m "Add reports to repository" || echo "No changes to commit"
+        git push

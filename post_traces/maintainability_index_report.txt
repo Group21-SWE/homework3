@@ -1,0 +1,1 @@
+{"hw2_debugging.py": {"mi": 51.946992184566646, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}}

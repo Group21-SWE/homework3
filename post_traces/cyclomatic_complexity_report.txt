@@ -1,0 +1,11 @@
+hw2_debugging.py
+    F 11:0 recombine - B (6)
+    F 3:0 mergeSort - A (2)
+quicksort.py
+    F 5:0 partition - A (3)
+    F 30:0 quick_sort - A (2)
+rand.py
+    F 3:0 random_array - A (2)
+
+5 blocks (classes, functions, methods) analyzed.
+Average complexity: A (3.0)

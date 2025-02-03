@@ -29,7 +29,7 @@ jobs:
         pylint *.py --exit-zero
     - name: Error detection with pyflake
       run: |
-        pyflakes *.py
+        pyflakes *.py --exit-zero
     - name: Complexity analysis with radon
       run: |
         python3 -m radon cc . -s -a

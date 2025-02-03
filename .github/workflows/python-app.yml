@@ -22,10 +22,11 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Lint with pylint
       run: |
-        python3 -m pylint $(git ls-files '*.py') > post_traces/pylint_report.txt
+        pylint $(git ls-files '*.py')
     - name: Error detection with pyflake
       run: |
         python3 -m pyflakes *.py > post_traces/pyflakes_report.txt

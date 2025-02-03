@@ -1,3 +1,7 @@
+'''
+This module provides methods to run quicksort.
+'''
+
 def partition(array, low, high):
     '''
     This method sorts the array based on the selected pivot.
@@ -23,7 +27,7 @@ def partition(array, low, high):
     (array[i + 1], array[high]) = (array[high], array[i + 1])
     return i + 1
 
-def quickSort(array, low, high):
+def quick_sort(array, low, high):
     '''
     This method sorts the array to the left and right of the pivot s.t.
     the entire array is sorted recursively.

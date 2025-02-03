@@ -1,1 +1,0 @@
-The result of pylint, pyflakes, radon .c and radon mi of all python files will be stores in 'post_taces' directory.

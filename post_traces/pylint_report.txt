@@ -1,0 +1,18 @@
+************* Module bubble_sort
+bubble_sort.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+bubble_sort.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module hw2_debugging
+hw2_debugging.py:12:35: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:34:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+hw2_debugging.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:12:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:12:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+************* Module rand
+rand.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+rand.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+rand.py:5:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+
+-----------------------------------
+Your code has been rated at 8.28/10
+

@@ -1,0 +1,1 @@
+{"bubble_sort.py": {"mi": 61.59902764975225, "rank": "A"}, "hw2_debugging.py": {"mi": 48.66820975795392, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}}

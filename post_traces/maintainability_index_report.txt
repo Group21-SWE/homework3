@@ -1,1 +1,1 @@
-{"hw2_debugging.py": {"mi": 51.946992184566646, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}, "hw2_gnomeSort.py": {"mi": 87.17829494475605, "rank": "A"}}
+{"hw2_debugging.py": {"mi": 78.14181462262843, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "gnomeSort.py": {"mi": 86.91100615780721, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}}

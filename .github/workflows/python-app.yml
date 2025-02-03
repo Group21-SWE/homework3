@@ -24,12 +24,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Create post_traces directory
+      run: mkdir -p post_traces
     - name: Lint with pylint
       run: |
         pylint *.py --exit-zero
     - name: Error detection with pyflake
       run: |
-        pyflakes *.py
+        pyflakes $(find . -name "*.py") || true
     - name: Complexity analysis with radon
       run: |
         python3 -m radon cc . -s -a

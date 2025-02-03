@@ -28,10 +28,10 @@ jobs:
       run: mkdir -p post_traces
     - name: Lint with pylint
       run: |
-        pylint *.py --exit-zero
+        pylint *.py --exit-zero > report.txt
     - name: Error detection with pyflake
       run: |
-        pyflakes $(find . -name "*.py") || true
+        pyflakes *.py
     - name: Complexity analysis with radon
       run: |
         python3 -m radon cc . -s -a

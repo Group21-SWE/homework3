@@ -49,7 +49,7 @@ jobs:
       run: |
         git checkout $GITHUB_REF_NAME  # Ensure we're on the correct branch
         mkdir -p reports               # Store reports in a dedicated folder
-        mv temp/pyflakes_report.txt reports/pyflakes_report.txt
-        git add reports/pyflakes_report.txt
-        git commit -m "Add Pyflakes report" || echo "No changes to commit"
+        mv temp/pylint_report.txt reports/pylint_report.txt
+        git add reports/pylint_report.txt
+        git commit -m "Add Pylint report" || echo "No changes to commit"
         git push

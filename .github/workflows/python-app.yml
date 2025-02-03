@@ -5,8 +5,6 @@ name: Python application
 on:
   push:
     branches: [ "**" ]
-  commit:
-    branches: ["hbrown4"]
 
 permissions:
   contents: write

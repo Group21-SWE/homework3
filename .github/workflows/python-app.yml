@@ -28,7 +28,7 @@ jobs:
       run: mkdir -p post_traces
     - name: Lint with pylint
       run: |
-        pylint *.py --exit-zero > report.txt
+        pylint *.py --exit-zero > post_traces/pylint_report.txt
     - name: Error detection with pyflake
       run: |
         pyflakes *.py
@@ -36,6 +36,11 @@ jobs:
       run: |
         python3 -m radon cc . -s -a
         python3 -m radon mi . --json
+    - name: Upload Pylint Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: pylint-report
+        path: post_traces/pylint_report.txt
     - name: Test with pytest
       run: |
         pytest

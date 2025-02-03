@@ -7,8 +7,7 @@ on:
     branches: [ "**" ]
 
 permissions:
-  contents: read
-
+  contents: write
 jobs:
   build:
 
@@ -25,10 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Create post_traces directory
-      run: mkdir -p post_traces
+      run: mkdir -p temp
     - name: Lint with pylint
       run: |
-        pylint *.py --exit-zero > post_traces/pylint_report.txt
+        pylint *.py --exit-zero > temp/pylint_report.txt
     - name: Error detection with pyflake
       run: |
         pyflakes *.py
@@ -50,7 +49,7 @@ jobs:
       run: |
         git checkout $GITHUB_REF_NAME  # Ensure we're on the correct branch
         mkdir -p reports               # Store reports in a dedicated folder
-        mv post_traces/pyflakes_report.txt reports/pyflakes_report.txt
+        mv temp/pyflakes_report.txt reports/pyflakes_report.txt
         git add reports/pyflakes_report.txt
         git commit -m "Add Pyflakes report"
         git push

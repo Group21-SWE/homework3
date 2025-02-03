@@ -7,7 +7,7 @@ quicksort.py
 gnome_sort.py
     F 6:0 gnome_sort - A (4)
 rand.py
-    F 3:0 random_array - A (2)
+    F 7:0 random_array - A (2)
 
 6 blocks (classes, functions, methods) analyzed.
 Average complexity: A (3.1666666666666665)

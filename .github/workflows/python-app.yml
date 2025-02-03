@@ -39,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: pylint-report
-        path: post_traces/pylint_report.txt
+        path: temp/pylint_report.txt
     - name: Configure Git
       run: |
         git config --global user.name "github-actions[bot]"
@@ -51,5 +51,5 @@ jobs:
         mkdir -p reports               # Store reports in a dedicated folder
         mv temp/pyflakes_report.txt reports/pyflakes_report.txt
         git add reports/pyflakes_report.txt
-        git commit -m "Add Pyflakes report"
+        git commit -m "Add Pyflakes report" || echo "No changes to commit"
         git push

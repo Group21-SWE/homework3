@@ -1,5 +1,3 @@
-# insertion sort
-
 import rand
 
 def gnomeSort(array):
@@ -11,12 +9,12 @@ def gnomeSort(array):
     
     while i < length: #for the entire array
         if i == 0 or array[i] >= array[i-1]: #if we either are at zero, or current element is greater than the last element
-            i += 1 #increment the position
+            i -= 1 #increment the position
         else:
             swap = array[i - 1] #swap the i and i-1 element
             array[i -1] = array[i]
             array[i] = swap
-        i -= 1 #decrement position
+            i += 1 #decrement position
         
     return array
         
@@ -26,6 +24,4 @@ print(arr)
 
 arr_out = gnomeSort(arr)
 
-print(arr_out)    
-    
-    
+print(arr_out)

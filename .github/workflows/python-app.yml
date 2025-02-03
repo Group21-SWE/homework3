@@ -29,11 +29,11 @@ jobs:
         pylint $(git ls-files '*.py') --exit-zero
     - name: Error detection with pyflake
       run: |
-        python3 -m pyflakes *.py --exit-zero
+        pyflakes $(git ls-files '*.py')
     - name: Complexity analysis with radon
       run: |
-        python3 -m radon cc . -s -a --exit-zero
-        python3 -m radon mi . --json --exit-zero
+        python3 -m radon cc . -s -a
+        python3 -m radon mi . --json
     - name: Test with pytest
       run: |
         pytest

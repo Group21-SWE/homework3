@@ -10,9 +10,6 @@ def merge_sort(arr):
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
 def recombine(left_arr, right_arr):
-    # if len(left_arr) == 0 and len(right_arr) == 0:
-    #     return
-
     left_index = 0
     right_index = 0
 

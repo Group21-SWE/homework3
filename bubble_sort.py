@@ -1,6 +1,6 @@
 ''' Module implements bubble sort on an array.'''
 def bubble_sort(arr):
-    '''Implements classic sorting algorithm bubble sort to sort a given array. Returns the sorted array.'''
+    '''Implements sorting algorithm bubble sort to sort given array. Returns the sorted array.'''
     count = 0
     while count < len(arr):
         index = 0

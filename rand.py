@@ -1,3 +1,4 @@
+'''Module fills in a given array with random integers'''
 import subprocess
 
 def random_array(arr):

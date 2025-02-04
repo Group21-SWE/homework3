@@ -1,1 +1,1 @@
-{"bubble_sort.py": {"mi": 60.13865278823087, "rank": "A"}, "hw2_debugging.py": {"mi": 50.55447131639391, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}}
+{"hw2_debugging.py": {"mi": 79.86454648087633, "rank": "A"}, "quicksort.py": {"mi": 66.25059264374399, "rank": "A"}, "gnome_sort.py": {"mi": 80.74440985943735, "rank": "A"}, "rand.py": {"mi": 100.0, "rank": "A"}, "hw2_test.py": {"mi": 62.26065850971976, "rank": "A"}}

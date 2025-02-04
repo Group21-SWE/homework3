@@ -1,13 +1,19 @@
 bubble_sort.py
     F 2:0 bubble_sort - A (4)
 hw2_debugging.py
-    F 12:0 recombine - B (6)
-    F 4:0 merge_sort - A (2)
+    F 27:0 recombine - B (6)
+    F 6:0 merge_sort - A (2)
 quicksort.py
     F 5:0 partition - A (3)
     F 30:0 quick_sort - A (2)
+gnome_sort.py
+    F 6:0 gnome_sort - A (4)
 rand.py
-    F 4:0 random_array - A (2)
+    F 7:0 random_array - A (2)
+hw2_test.py
+    F 3:0 test_usual - A (3)
+    F 9:0 test_one_element - A (2)
+    F 15:0 test_non_element - A (2)
 
-6 blocks (classes, functions, methods) analyzed.
-Average complexity: A (3.1666666666666665)
+9 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.888888888888889)

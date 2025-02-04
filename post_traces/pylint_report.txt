@@ -1,4 +1,11 @@
+************* Module hw2_test
+hw2_test.py:19:0: C0304: Final newline missing (missing-final-newline)
+hw2_test.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+hw2_test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_test.py:4:16: R1721: Unnecessary use of a comprehension, use list(range(5, 0, -1)) instead. (unnecessary-comprehension)
+hw2_test.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_test.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
 
-------------------------------------
-Your code has been rated at 10.00/10
+-----------------------------------
+Your code has been rated at 9.23/10
 

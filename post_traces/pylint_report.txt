@@ -1,0 +1,14 @@
+************* Module bubble_sort
+bubble_sort.py:2:0: C0301: Line too long (113/100) (line-too-long)
+bubble_sort.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module hw2_debugging
+hw2_debugging.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+hw2_debugging.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:12:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module rand
+rand.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+rand.py:6:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+
+-----------------------------------
+Your code has been rated at 8.85/10
+

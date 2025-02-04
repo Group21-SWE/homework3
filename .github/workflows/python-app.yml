@@ -68,3 +68,6 @@ jobs:
         git add post_traces
         git commit -m "Add reports to repository" || echo "No changes to commit"
         git push
+    - name: Run tests for Merge SOrt
+      run: |
+        pytest hw2_test.py

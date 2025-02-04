@@ -1,7 +1,7 @@
 '''
 This module runs gnome sort
 '''
-# import rand
+import rand
 
 def gnome_sort(array):
     '''
@@ -27,9 +27,9 @@ def gnome_sort(array):
             array[i] = swap
             i -= 1 #decrement position
     return array
-# arr = rand.random_array([None] * 20)
-# print(arr)
+arr = rand.random_array([None] * 20)
+print(arr)
 
-# arr_out = gnome_sort(arr)
+arr_out = gnome_sort(arr)
 
-# print(arr_out)
+print(arr_out)

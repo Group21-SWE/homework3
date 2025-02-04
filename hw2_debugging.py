@@ -9,9 +9,9 @@ def merge_sort(arr):
 
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
-def recombine(left_arr, right_arr):    
-    if len(left_arr) == 0 and len(right_arr) == 0:
-        return
+def recombine(left_arr, right_arr):
+    # if len(left_arr) == 0 and len(right_arr) == 0:
+    #     return
 
     left_index = 0
     right_index = 0
@@ -24,14 +24,13 @@ def recombine(left_arr, right_arr):
         else:
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
-        print(merge_arr)
 
     for i in range(right_index, len(right_arr)):
         merge_arr[left_index + i] = right_arr[i]
 
     for i in range(left_index, len(left_arr)):
         merge_arr[i + right_index] = left_arr[i]
-        
+
     return merge_arr
 
 rand_arr = rand.random_array([None] * 20)

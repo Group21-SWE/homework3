@@ -1,4 +1,6 @@
+************* Module hw2_debugging
+hw2_debugging.py:63:0: C0304: Final newline missing (missing-final-newline)
 
-------------------------------------
-Your code has been rated at 10.00/10
+-----------------------------------
+Your code has been rated at 9.82/10
 

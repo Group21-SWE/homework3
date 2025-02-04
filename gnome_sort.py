@@ -5,7 +5,7 @@ This module runs gnome sort
 
 def gnome_sort(array):
     '''
-    This method sorts the array with gnome sort
+    This method sorts the array with gnome sort.
     
     Parameters
     -----
